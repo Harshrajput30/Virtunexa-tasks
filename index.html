@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ExpenseTracker</div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Expense Overview Section -->
+    <section id="overview" class="section">
+        <h1>Expense Overview</h1>
+        <div class="controls">
+            <select id="filter">
+                <option value="weekly">Weekly</option>
+                <option value="monthly" selected>Monthly</option>
+                <option value="category">By Category</option>
+            </select>
+            <input type="text" id="search" placeholder="Search category...">
+        </div>
+        <div class="expense-list">
+            <h2>Expense List</h2>
+            <ul id="expenseItems"></ul>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="section">
+        <h1>Expense Analytics</h1>
+        <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
