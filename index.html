@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Survey Form</h2>
+        <form id="surveyForm">
+            <label for="question1">Do you like programming?</label>
+            <select id="question1" name="question1" onchange="handleSelection()">
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <div id="followUpYes" class="hidden">
+                <label for="favLang">What is your favorite programming language?</label>
+                <input type="text" id="favLang" name="favLang">
+            </div>
+
+            <div id="followUpNo" class="hidden">
+                <label for="reason">Why don't you like programming?</label>
+                <input type="text" id="reason" name="reason">
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="section2">
+        <h2>Thank You</h2>
+        <p>Your responses help us improve!</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
